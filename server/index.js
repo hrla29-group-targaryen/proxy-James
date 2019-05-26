@@ -35,6 +35,7 @@ let restaurantID
 app.use('/api/intro', proxy({
 	target:'http://localhost:3000/',
 	changeOrigin: true,
+	pathRewrite: {'^/api/intro' : ''},
 	router: (req) => {
     return `http://localhost:3001/api/intro/?id=${restaurantID}`;
 	}
@@ -43,6 +44,7 @@ app.use('/api/intro', proxy({
 app.use('/api/menu', proxy({
 	target:'http://localhost:3000/',
 	changeOrigin: true,
+	pathRewrite: {'^/api/menu' : ''},
 	router: (req) => {
     return `http://localhost:3002/api/menu/?id=${restaurantID}`;
 	}
