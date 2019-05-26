@@ -12,11 +12,10 @@ This proxy server is proxying 4 different service servers to render one website.
 ### Usage
 
 ```
-mkdir your_new_folder
-cd your_new_folder
-git clone https://github.com/hrla29-group-targaryen/hrla29-front-end-capstone.git
+git clone https://github.com/hrla29-group-targaryen/proxy-James.git
+cd proxy-James
 npm install
-npm start
+npm run dev:server
 ```
 
 ### Requirements
