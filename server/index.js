@@ -10,13 +10,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-//serving index.html file to the user's browser
-app.get('/', express.static(path.resolve(__dirname, "../static")))
-
-//sending .css file to index.html
-app.get('/master.css', (req,res)=> {
-	res.sendFile(path.resolve(__dirname, "../static/master.css"))
-})
+//serving static files to the user's browser
+app.use('/', express.static(path.resolve(__dirname, "../static")))
 
 //proxing requests from index.html
 app.use('/restaurants', proxy ({
