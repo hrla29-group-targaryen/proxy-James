@@ -1,0 +1,36 @@
+{
+  "name": "proxy_sample1",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "scripts": {
+    "dev:server": "nodemon server/index.js",
+    "dev:static": "webpack -d -w",
+    "dev:client": "webpack-dev-server --open -d"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "gh-pages": "^2.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  }
+}
