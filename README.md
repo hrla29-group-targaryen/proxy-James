@@ -1,7 +1,8 @@
 # FEC Proxy Server (James Kim)
 > This is a proxy server for our project
 
-![](https://drive.google.com/file/d/1LmTFqxAxmaNYlb3SgteV8cOFvi8xhLj8/view?usp=sharing)
+![](pxy.png)
+
 -Proxy Server Diagram
 
 This proxy server is proxying 4 different service servers to render one website. 
