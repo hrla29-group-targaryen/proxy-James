@@ -15,7 +15,7 @@ app.use('/', express.static(path.resolve(__dirname, "../static")))
 
 //proxing requests from index.html
 app.use('/restaurants', proxy ({
-  target:'http://localhost:4000',
+  target:'http://localhost:3000',
   router: {
     '/time_sponsored': 'http://localhost:3400',
     '/menu_cart': 'http://localhost:3100',
