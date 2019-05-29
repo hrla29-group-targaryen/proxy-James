@@ -15,15 +15,15 @@ app.use('/', express.static(path.resolve(__dirname, "../static")))
 
 //proxing requests from index.html
 app.use('/restaurants', proxy ({
- target:'http://localhost:3000',
- router: {
-   '/nav_intro': 'http://localhost:3001',
-   '/time_sponsored': 'http://localhost:3002',
-   // '/menu_cart': 'http://localhost:3003',
-   // '/reviews_footer': 'http://localhost:3004',
- },
- changeOrigin: true
-}))
+  target:'http://localhost:4000',
+  router: {
+    '/time_sponsored': 'http://localhost:3400',
+    '/menu_cart': 'http://localhost:3100',
+    '/reviews_footer': 'http://localhost:3200',
+    '/nav_intro': 'http://localhost:3300'
+  },
+  changeOrigin: true
+ }))
 
 //listening on port 3000
 app.listen(PORT, ()=> console.log("Server is up and running on", PORT))
