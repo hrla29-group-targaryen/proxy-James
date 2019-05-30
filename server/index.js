@@ -15,7 +15,7 @@ app.use('/', express.static(path.resolve(__dirname, "../static")))
 
 //proxing requests from index.html
 app.use('/restaurants', proxy ({
-  target:'http://localhost:3000',
+  target:'https://grubhub-mock-james.herokuapp.com/',
   router: {
     '/time_sponsored': 'https://time-sponsored.herokuapp.com', // http://localhost:3400 // 'https://time-sponsored.herokuapp.com'
     '/menu_cart': 'https://menu-cart.herokuapp.com', // http://localhost:3100
