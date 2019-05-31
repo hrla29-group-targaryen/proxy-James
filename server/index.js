@@ -19,7 +19,7 @@ app.use('/', express.static(path.resolve(__dirname, "../static")))
 app.use('/restaurants', proxy ({
   target:'https://grubhub-mock-james.herokuapp.com/',
   router: {
-    '/time_sponsored': 'http://localhost:3400', // http://localhost:3400 // 'https://time-sponsored.herokuapp.com'
+    '/time_sponsored': 'https://time-sponsored.herokuapp.com', // http://localhost:3400 // 'https://time-sponsored.herokuapp.com'
     '/menu_cart': 'https://menu-cart.herokuapp.com', // http://localhost:3100
     '/reviews_footer': 'https://reviews-footer.herokuapp.com',
     '/nav_intro': 'https://nav-about.herokuapp.com'
